@@ -3,6 +3,14 @@
 """Testing trie"""
 from trie import Trie
 
-trie = Trie('apple', 'apps')
+trie = Trie()
+trie.insert("apple")
+trie.insert("adp")
+trie.insert('app')
 
-print(trie.node['l'].node)
+current = trie.node.children
+
+print(current['a'].children['p'].children['p'].end)
+print(trie.startwith('as'))
+print(trie.contains('ad'))
+print(trie.contains('app'))
